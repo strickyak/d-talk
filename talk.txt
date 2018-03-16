@@ -224,7 +224,11 @@ Temporal Logic (or Tense Logic) "D" studied by Arthur Prior and Robert Bull.
 
 Search for:  Tense Logic, Temporal Logic, Modal Logic.
 
-These slides:  www.yak.net/d
+These slides:  http://www.yak.net/d
+
+Source code: https://github.com/strickyak/d-talk
+
+I dedicate these slides to the Public Domain ( Creative Commons CC0 1.0 Universal ).
 
 ; That's it for now.
 ; I've made postcards with more puzzles.
