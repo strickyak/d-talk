@@ -1,0 +1,232 @@
+; Hit "N" for Next slide, or "P" for Previous slide.
+; Or just scroll down.
+
+/page
+Rainy Day Stories: This is an introduction to the Temporal Logic system called "D" studied by Arthur Prior* and Robert Bull*.
+
+I haven't seen Temporal Logic used in Recreational Maths and would like to introduce this system.
+It is easy enough that anyone can understand it, but compelling enough to make interesting puzzles.
+
+These slides are on the web at www.yak.net/d
+
+    -- Henry Strickland  << strick % yak.net >>
+    -- Gathering for Gardner << G4G13 >> 2018-04
+
+; * According to: Mathematical Modal Logic: a View of its Evolution. Robert Goldblatt. Centre for Logic, Language and Computation. Victoria University, P. O. Box 600, Wellington, New Zealand.  http://homepages.mcs.vuw.ac.nz/~rob/papers/modalhist.pdf
+
+
+
+/page
+>g    R  = It rains (today).
+>g   @@R  = TOMORROW it rains.
+>g   %%R  = EVENTUALLY it rains.
+>g   ##R  = FOREVERMORE it rains.
+
+; There's only four symbols to learn, so please pay attention, because you're going to need these four.
+; R means Rain on the day in question, which by default is today.
+; Circle (@@) means TOMORROW.  Whatever follows the circle is true tomorrow.
+; Diamond (%%) means EVENTUALLY, at least once. Whatever follows the diamond is true at least once, EITHER today, OR tomorrow, OR some day in the future.
+; Box (##) means FOREVERMORE.  Whatever follows the box is true today, AND tomorrow, AND every day into the future.
+
+/page
+How to remember them:
+
+>g   @@  = The "point" TOMORROW.
+A circle is like a big point, and that point in time is TOMORROW.
+
+>g   %%  = EVENTUALLY at any point
+A diamond has many points, and ANY day will do.
+
+>g   ##  = FOREVERMORE
+A box looks like a calendar, marking ALL days, starting today.
+
+
+
+/page
+Four Example Rainy Day Stories (1=Rain, 0=NoRain):
+
+>y 1 0 1 1 1 0 0 0 0 0 0 0 0 0...
+>y 0 1 0 1 0 1 0 1 0 1 0 1 0 1...
+>y 0 0 0 0 0 0 0 0 0 0 0 0 0 0...
+>y 1 1 1 1 1 1 1 1 1 1 1 1 1 1...
+
+; This is how I visualize Rainy Day Stories. 
+; Each line of 1s and 0s is a Story.
+; 1 means Rain, 0 means No Rain.
+; The first digit on each line is whether it rains today.
+; The second digit is whether it rains tomorrow.
+; The third digit is the next day, and so forth, into the future.
+
+/page
+>g    R  = It rains (today).
+
+>y [v] 1 0 1 1 1 0 0 0 0 0 0 0 0 0...
+>y [.] 0 1 0 1 0 1 0 1 0 1 0 1 0 1...
+>y [.] 0 0 0 0 0 0 0 0 0 0 0 0 0 0...
+>y [v] 1 1 1 1 1 1 1 1 1 1 1 1 1 1...
+
+; Raining Today matches the 1st and 4th story, because they start with a 1, meaning Rain Today.
+
+/page
+>g   @@R  = TOMORROW it rains.
+
+>y [.] 1 0 1 1 1 0 0 0 0 0 0 0 0 0...
+>y [v] 0 1 0 1 0 1 0 1 0 1 0 1 0 1...
+>y [.] 0 0 0 0 0 0 0 0 0 0 0 0 0 0...
+>y [v] 1 1 1 1 1 1 1 1 1 1 1 1 1 1...
+
+; TOMORROW RAIN matches the 2nd and 4th story, because they have a 1 in the second position, meaning Rain Tomorrow.
+
+/page
+>g   %%R  = EVENTUALLY it rains.
+
+>y [v] 1 0 1 1 1 0 0 0 0 0 0 0 0 0...
+>y [v] 0 1 0 1 0 1 0 1 0 1 0 1 0 1...
+>y [.] 0 0 0 0 0 0 0 0 0 0 0 0 0 0...
+>y [v] 1 1 1 1 1 1 1 1 1 1 1 1 1 1...
+
+; EVENTUALLY RAIN matches all but the 3rd story, which has no rainy days at all.
+
+/page
+>g   ##R  = FOREVERMORE it rains.
+
+>y [.] 1 0 1 1 1 0 0 0 0 0 0 0 0 0...
+>y [.] 0 1 0 1 0 1 0 1 0 1 0 1 0 1...
+>y [.] 0 0 0 0 0 0 0 0 0 0 0 0 0 0...
+>y [v] 1 1 1 1 1 1 1 1 1 1 1 1 1 1...
+
+; FOREVERMORE RAIN only matches the last story, in which every day is rainy.
+
+/page
+>g a && b   = a AND b
+>g a || b   = a OR b
+>g   ~~ b   = NOT b
+>g a ^^ b   = a IMPLIES b  (IF a THEN b)
+
+; All the usual Logic Operators are allowed: And, Or, Not, Implies.
+
+/page
+>g   R  &&  @@R
+
+>y [.] 1 0 1 1 1 0 0 0 0 0 0 0 0 0...
+>y [.] 0 1 0 1 0 1 0 1 0 1 0 1 0 1...
+>y [.] 0 0 0 0 0 0 0 0 0 0 0 0 0 0...
+>y [v] 1 1 1 1 1 1 1 1 1 1 1 1 1 1...
+
+; It rains TODAY and it rains TOMORROW.
+; Only the last story starts with "1 1".
+
+/page
+>g   R  &&  @@~~R
+
+>y [v] 1 0 1 1 1 0 0 0 0 0 0 0 0 0...
+>y [.] 0 1 0 1 0 1 0 1 0 1 0 1 0 1...
+>y [.] 0 0 0 0 0 0 0 0 0 0 0 0 0 0...
+>y [.] 1 1 1 1 1 1 1 1 1 1 1 1 1 1...
+
+; It rains TODAY and TOMORROW it does NOT rain.
+; Only the first story starts with "1 0".
+
+/page
+>g   @@@@R  &&  @@@@@@R
+
+>y [v] 1 0 1 1 1 0 0 0 0 0 0 0 0 0...
+>y [.] 0 1 0 1 0 1 0 1 0 1 0 1 0 1...
+>y [.] 0 0 0 0 0 0 0 0 0 0 0 0 0 0...
+>y [v] 1 1 1 1 1 1 1 1 1 1 1 1 1 1...
+
+; Two circles in a row means "Tomorrow's Tomorrow"; three circles is the day after that.
+; So, it rains THE DAY AFTER TOMORROW and also THE DAY AFTER THAT.
+; The first and last story both have "1"s in the 3rd and 4th position.
+
+
+/page
+>g   %%##R
+
+Eventually, it will rain forevermore.
+"Some day it will rain and never quit."
+
+; Diamond Box R means Eventually it will rain forevermore.
+; That is, some day it will rain and never quit.
+
+>g   ##%%R
+
+Forevermore, it will eventually rain.
+"No matter how far in the future we go, it will always rain again."
+
+; Box Diamond R means Forevermore it will eventually rain.
+; No matter how far in the future we go, it will always rain again.
+
+/page
+>g   %% ( R && @@R )
+
+"Eventually it will rain (at least) two days in a row."
+
+>g   ## ( R ^^ @@~~R )
+
+"It will never rain two (or more) days in a row."
+
+>g   ## ( R ^^ @@R )
+
+"If it ever rains, it will never quit."
+
+/page
+Can you write expressions for these:
+
+(1) "It rains only every other day."
+
+; Your expression must match exactly two stories.
+
+
+(2) "Whenever it rains, it rains exactly two days in a row (never one, never three)."
+
+; It may not rain at all.  But it will rain an even number of days.
+
+/page
+Game of Thrones:
+>g    @@%%W && ~~W
+
+; I'll end with some Real World Examples.
+
+; From the Game of Thrones:
+; Starting tomorrow, eventually W;  but not W today.
+; That means: "Winter is coming!"
+
+/page
+Game of Thrones:
+>g    @@%%W && ~~W
+Morton salt:
+>g    ## ( R ^^ P )
+
+; From Morton Salt:
+; It is always the case that R implies P.
+; That means: "When it rains, it pours!"
+
+/page
+Game of Thrones:
+>g    @@%%W && ~~W
+Morton salt:
+>g    ## ( R ^^ P )
+Genesis 8 (God's Covenant to Noah):
+>g       39    i
+>g   ~~%%   &&    @@  R
+>g        i=0
+
+; From Genesis 8, we have God's Covenant to Noah:
+; It will never happen that,
+; it rains Today and Tomorrow and the Day after That, etc.,
+; up to 39 circles and an R.
+; In other words: "Starting today, it will never rain 40 days in a row!"
+
+/page
+
+Temporal Logic (or Tense Logic) "D" studied by Arthur Prior and Robert Bull.
+
+Search for:  Tense Logic, Temporal Logic, Modal Logic.
+
+These slides:  www.yak.net/d
+
+; That's it for now.
+; I've made postcards with more puzzles.
+; Some are spread around the tables,
+; and they will also be in the gift exchange.

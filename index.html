@@ -1,0 +1,1325 @@
+
+<html>
+<head>
+	  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	  <meta charset="UTF-8">
+
+	  <style>
+	  	.green {
+		  color: #00FF00;
+		  font-size: 100%;
+		  /* font-family: courier, monospace; */
+		  font-family: monospace;
+		}
+		.yellow {
+		  color: #FFFF00;
+		  font-size: 100%;
+		  font-family: monospace;
+		}
+		.big-green {
+		  color: #00FF00;
+		  font-size: 150%;
+		  font-family: monospace;
+		}
+		.big-yellow {
+		  color: #FFFF00;
+		  font-size: 130%;
+		  font-family: monospace;
+		}
+		.title {
+		  color: #aaaaaa;
+		  font-size: 50%;
+		  font-family: Arial, sans-serif;
+		  text-align: center;
+		}
+		.prose {
+		  color: #FFFF00;
+		  font-size: 75%;
+		  font-family: Arial, sans-serif;
+		}
+		.gloss {
+		  color: #bbbbbb;
+		  font-size: 30%;
+		  font-family: Arial, sans-serif;
+		}
+	  </style>
+
+	  <script src="jquery-3.3.1.min.js"></script>
+
+	  <script>
+	    Page = -1;
+
+	    // Thanks https://stackoverflow.com/questions/13735912/anchor-jumping-by-using-javascript
+	    function jump(h) {
+		location.href = "#" + h;
+	    }
+
+	    $(document).keypress(function(e){
+		kc = e.keyCode & 31;
+		if (kc == 14) {  // Next
+		  ++Page;
+		  jump(Page);
+		} else if (kc == 16) { // Prev
+		  --Page;
+		  if (Page < 0) Page = 0;
+		  jump(Page);
+		} else if (kc == 8) { // Home
+		  Page = 0;
+		  jump(Page);
+		} else if (kc == 20) { // Ten
+		  Page = 10;
+		  jump(Page);
+		}
+	    });
+
+	  </script>
+</head>
+<body bgcolor=#000055>
+  
+
+	</div>
+	<div class=gloss>
+  
+Hit "N" for Next slide, or "P" for Previous slide.<br>
+
+	</div>
+	<div class=gloss>
+  
+Or just scroll down.<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+        <br> <br> <br> <br> <br>
+	<br> <br>
+	
+	<div class=title>
+	  <a name=0>[0]</a> www.yak.net/d
+	</div>
+  
+
+	</div>
+	<div class=prose>
+  
+Rainy Day Stories: This is an introduction to the Temporal Logic system called "D" studied by Arthur Prior* and Robert Bull*.<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=prose>
+  
+I haven't seen Temporal Logic used in Recreational Maths and would like to introduce this system.<br>
+
+	</div>
+	<div class=prose>
+  
+It is easy enough that anyone can understand it, but compelling enough to make interesting puzzles.<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=prose>
+  
+These slides are on the web at www.yak.net/d<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=prose>
+  
+&nbsp; &nbsp; -- Henry Strickland&nbsp; &#171;  strick % yak.net &#187; <br>
+
+	</div>
+	<div class=prose>
+  
+&nbsp; &nbsp; -- Gathering for Gardner &#171;  G4G13 &#187;  2018-04<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=gloss>
+  
+* According to: Mathematical Modal Logic: a View of its Evolution. Robert Goldblatt. Centre for Logic, Language and Computation. Victoria University, P. O. Box 600, Wellington, New Zealand.&nbsp; http://homepages.mcs.vuw.ac.nz/~rob/papers/modalhist.pdf<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+        <br> <br> <br> <br> <br>
+	<br> <br>
+	
+	<div class=title>
+	  <a name=1>[1]</a> www.yak.net/d
+	</div>
+  
+
+	</div>
+	<div class=big-green>
+  
+&nbsp;  R&nbsp; = It rains (today).<br>
+
+	</div>
+	<div class=big-green>
+  
+&nbsp; &#9898;R&nbsp; = TOMORROW it rains.<br>
+
+	</div>
+	<div class=big-green>
+  
+&nbsp; &#9671;R&nbsp; = EVENTUALLY it rains.<br>
+
+	</div>
+	<div class=big-green>
+  
+&nbsp; &#9723;R&nbsp; = FOREVERMORE it rains.<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=gloss>
+  
+There's only four symbols to learn, so please pay attention, because you're going to need these four.<br>
+
+	</div>
+	<div class=gloss>
+  
+R means Rain on the day in question, which by default is today.<br>
+
+	</div>
+	<div class=gloss>
+  
+Circle (&#9898;) means TOMORROW.&nbsp; Whatever follows the circle is true tomorrow.<br>
+
+	</div>
+	<div class=gloss>
+  
+Diamond (&#9671;) means EVENTUALLY, at least once. Whatever follows the diamond is true at least once, EITHER today, OR tomorrow, OR some day in the future.<br>
+
+	</div>
+	<div class=gloss>
+  
+Box (&#9723;) means FOREVERMORE.&nbsp; Whatever follows the box is true today, AND tomorrow, AND every day into the future.<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+        <br> <br> <br> <br> <br>
+	<br> <br>
+	
+	<div class=title>
+	  <a name=2>[2]</a> www.yak.net/d
+	</div>
+  
+
+	</div>
+	<div class=prose>
+  
+How to remember them:<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=big-green>
+  
+&nbsp; &#9898;&nbsp; = The "point" TOMORROW.<br>
+
+	</div>
+	<div class=prose>
+  
+A circle is like a big point, and that point in time is TOMORROW.<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=big-green>
+  
+&nbsp; &#9671;&nbsp; = EVENTUALLY at any point<br>
+
+	</div>
+	<div class=prose>
+  
+A diamond has many points, and ANY day will do.<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=big-green>
+  
+&nbsp; &#9723;&nbsp; = FOREVERMORE<br>
+
+	</div>
+	<div class=prose>
+  
+A box looks like a calendar, marking ALL days, starting today.<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+        <br> <br> <br> <br> <br>
+	<br> <br>
+	
+	<div class=title>
+	  <a name=3>[3]</a> www.yak.net/d
+	</div>
+  
+
+	</div>
+	<div class=prose>
+  
+Four Example Rainy Day Stories (1=Rain, 0=NoRain):<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=big-yellow>
+  
+1 0 1 1 1 0 0 0 0 0 0 0 0 0...<br>
+
+	</div>
+	<div class=big-yellow>
+  
+0 1 0 1 0 1 0 1 0 1 0 1 0 1...<br>
+
+	</div>
+	<div class=big-yellow>
+  
+0 0 0 0 0 0 0 0 0 0 0 0 0 0...<br>
+
+	</div>
+	<div class=big-yellow>
+  
+1 1 1 1 1 1 1 1 1 1 1 1 1 1...<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=gloss>
+  
+This is how I visualize Rainy Day Stories. <br>
+
+	</div>
+	<div class=gloss>
+  
+Each line of 1s and 0s is a Story.<br>
+
+	</div>
+	<div class=gloss>
+  
+1 means Rain, 0 means No Rain.<br>
+
+	</div>
+	<div class=gloss>
+  
+The first digit on each line is whether it rains today.<br>
+
+	</div>
+	<div class=gloss>
+  
+The second digit is whether it rains tomorrow.<br>
+
+	</div>
+	<div class=gloss>
+  
+The third digit is the next day, and so forth, into the future.<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+        <br> <br> <br> <br> <br>
+	<br> <br>
+	
+	<div class=title>
+	  <a name=4>[4]</a> www.yak.net/d
+	</div>
+  
+
+	</div>
+	<div class=big-green>
+  
+&nbsp;  R&nbsp; = It rains (today).<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=big-yellow>
+  
+&#9745; 1 0 1 1 1 0 0 0 0 0 0 0 0 0...<br>
+
+	</div>
+	<div class=big-yellow>
+  
+&#9744; 0 1 0 1 0 1 0 1 0 1 0 1 0 1...<br>
+
+	</div>
+	<div class=big-yellow>
+  
+&#9744; 0 0 0 0 0 0 0 0 0 0 0 0 0 0...<br>
+
+	</div>
+	<div class=big-yellow>
+  
+&#9745; 1 1 1 1 1 1 1 1 1 1 1 1 1 1...<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=gloss>
+  
+Raining Today matches the 1st and 4th story, because they start with a 1, meaning Rain Today.<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+        <br> <br> <br> <br> <br>
+	<br> <br>
+	
+	<div class=title>
+	  <a name=5>[5]</a> www.yak.net/d
+	</div>
+  
+
+	</div>
+	<div class=big-green>
+  
+&nbsp; &#9898;R&nbsp; = TOMORROW it rains.<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=big-yellow>
+  
+&#9744; 1 0 1 1 1 0 0 0 0 0 0 0 0 0...<br>
+
+	</div>
+	<div class=big-yellow>
+  
+&#9745; 0 1 0 1 0 1 0 1 0 1 0 1 0 1...<br>
+
+	</div>
+	<div class=big-yellow>
+  
+&#9744; 0 0 0 0 0 0 0 0 0 0 0 0 0 0...<br>
+
+	</div>
+	<div class=big-yellow>
+  
+&#9745; 1 1 1 1 1 1 1 1 1 1 1 1 1 1...<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=gloss>
+  
+TOMORROW RAIN matches the 2nd and 4th story, because they have a 1 in the second position, meaning Rain Tomorrow.<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+        <br> <br> <br> <br> <br>
+	<br> <br>
+	
+	<div class=title>
+	  <a name=6>[6]</a> www.yak.net/d
+	</div>
+  
+
+	</div>
+	<div class=big-green>
+  
+&nbsp; &#9671;R&nbsp; = EVENTUALLY it rains.<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=big-yellow>
+  
+&#9745; 1 0 1 1 1 0 0 0 0 0 0 0 0 0...<br>
+
+	</div>
+	<div class=big-yellow>
+  
+&#9745; 0 1 0 1 0 1 0 1 0 1 0 1 0 1...<br>
+
+	</div>
+	<div class=big-yellow>
+  
+&#9744; 0 0 0 0 0 0 0 0 0 0 0 0 0 0...<br>
+
+	</div>
+	<div class=big-yellow>
+  
+&#9745; 1 1 1 1 1 1 1 1 1 1 1 1 1 1...<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=gloss>
+  
+EVENTUALLY RAIN matches all but the 3rd story, which has no rainy days at all.<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+        <br> <br> <br> <br> <br>
+	<br> <br>
+	
+	<div class=title>
+	  <a name=7>[7]</a> www.yak.net/d
+	</div>
+  
+
+	</div>
+	<div class=big-green>
+  
+&nbsp; &#9723;R&nbsp; = FOREVERMORE it rains.<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=big-yellow>
+  
+&#9744; 1 0 1 1 1 0 0 0 0 0 0 0 0 0...<br>
+
+	</div>
+	<div class=big-yellow>
+  
+&#9744; 0 1 0 1 0 1 0 1 0 1 0 1 0 1...<br>
+
+	</div>
+	<div class=big-yellow>
+  
+&#9744; 0 0 0 0 0 0 0 0 0 0 0 0 0 0...<br>
+
+	</div>
+	<div class=big-yellow>
+  
+&#9745; 1 1 1 1 1 1 1 1 1 1 1 1 1 1...<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=gloss>
+  
+FOREVERMORE RAIN only matches the last story, in which every day is rainy.<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+        <br> <br> <br> <br> <br>
+	<br> <br>
+	
+	<div class=title>
+	  <a name=8>[8]</a> www.yak.net/d
+	</div>
+  
+
+	</div>
+	<div class=big-green>
+  
+a &#8743; b&nbsp;  = a AND b<br>
+
+	</div>
+	<div class=big-green>
+  
+a &#8744; b&nbsp;  = a OR b<br>
+
+	</div>
+	<div class=big-green>
+  
+&nbsp; &#172; b&nbsp;  = NOT b<br>
+
+	</div>
+	<div class=big-green>
+  
+a &#8594; b&nbsp;  = a IMPLIES b&nbsp; (IF a THEN b)<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=gloss>
+  
+All the usual Logic Operators are allowed: And, Or, Not, Implies.<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+        <br> <br> <br> <br> <br>
+	<br> <br>
+	
+	<div class=title>
+	  <a name=9>[9]</a> www.yak.net/d
+	</div>
+  
+
+	</div>
+	<div class=big-green>
+  
+&nbsp; R&nbsp; &#8743;&nbsp; &#9898;R<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=big-yellow>
+  
+&#9744; 1 0 1 1 1 0 0 0 0 0 0 0 0 0...<br>
+
+	</div>
+	<div class=big-yellow>
+  
+&#9744; 0 1 0 1 0 1 0 1 0 1 0 1 0 1...<br>
+
+	</div>
+	<div class=big-yellow>
+  
+&#9744; 0 0 0 0 0 0 0 0 0 0 0 0 0 0...<br>
+
+	</div>
+	<div class=big-yellow>
+  
+&#9745; 1 1 1 1 1 1 1 1 1 1 1 1 1 1...<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=gloss>
+  
+It rains TODAY and it rains TOMORROW.<br>
+
+	</div>
+	<div class=gloss>
+  
+Only the last story starts with "1 1".<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+        <br> <br> <br> <br> <br>
+	<br> <br>
+	
+	<div class=title>
+	  <a name=10>[10]</a> www.yak.net/d
+	</div>
+  
+
+	</div>
+	<div class=big-green>
+  
+&nbsp; R&nbsp; &#8743;&nbsp; &#9898;&#172;R<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=big-yellow>
+  
+&#9745; 1 0 1 1 1 0 0 0 0 0 0 0 0 0...<br>
+
+	</div>
+	<div class=big-yellow>
+  
+&#9744; 0 1 0 1 0 1 0 1 0 1 0 1 0 1...<br>
+
+	</div>
+	<div class=big-yellow>
+  
+&#9744; 0 0 0 0 0 0 0 0 0 0 0 0 0 0...<br>
+
+	</div>
+	<div class=big-yellow>
+  
+&#9744; 1 1 1 1 1 1 1 1 1 1 1 1 1 1...<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=gloss>
+  
+It rains TODAY and TOMORROW it does NOT rain.<br>
+
+	</div>
+	<div class=gloss>
+  
+Only the first story starts with "1 0".<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+        <br> <br> <br> <br> <br>
+	<br> <br>
+	
+	<div class=title>
+	  <a name=11>[11]</a> www.yak.net/d
+	</div>
+  
+
+	</div>
+	<div class=big-green>
+  
+&nbsp; &#9898;&#9898;R&nbsp; &#8743;&nbsp; &#9898;&#9898;&#9898;R<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=big-yellow>
+  
+&#9745; 1 0 1 1 1 0 0 0 0 0 0 0 0 0...<br>
+
+	</div>
+	<div class=big-yellow>
+  
+&#9744; 0 1 0 1 0 1 0 1 0 1 0 1 0 1...<br>
+
+	</div>
+	<div class=big-yellow>
+  
+&#9744; 0 0 0 0 0 0 0 0 0 0 0 0 0 0...<br>
+
+	</div>
+	<div class=big-yellow>
+  
+&#9745; 1 1 1 1 1 1 1 1 1 1 1 1 1 1...<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=gloss>
+  
+Two circles in a row means "Tomorrow's Tomorrow"; three circles is the day after that.<br>
+
+	</div>
+	<div class=gloss>
+  
+So, it rains THE DAY AFTER TOMORROW and also THE DAY AFTER THAT.<br>
+
+	</div>
+	<div class=gloss>
+  
+The first and last story both have "1"s in the 3rd and 4th position.<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+        <br> <br> <br> <br> <br>
+	<br> <br>
+	
+	<div class=title>
+	  <a name=12>[12]</a> www.yak.net/d
+	</div>
+  
+
+	</div>
+	<div class=big-green>
+  
+&nbsp; &#9671;&#9723;R<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=prose>
+  
+Eventually, it will rain forevermore.<br>
+
+	</div>
+	<div class=prose>
+  
+"Some day it will rain and never quit."<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=gloss>
+  
+Diamond Box R means Eventually it will rain forevermore.<br>
+
+	</div>
+	<div class=gloss>
+  
+That is, some day it will rain and never quit.<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=big-green>
+  
+&nbsp; &#9723;&#9671;R<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=prose>
+  
+Forevermore, it will eventually rain.<br>
+
+	</div>
+	<div class=prose>
+  
+"No matter how far in the future we go, it will always rain again."<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=gloss>
+  
+Box Diamond R means Forevermore it will eventually rain.<br>
+
+	</div>
+	<div class=gloss>
+  
+No matter how far in the future we go, it will always rain again.<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+        <br> <br> <br> <br> <br>
+	<br> <br>
+	
+	<div class=title>
+	  <a name=13>[13]</a> www.yak.net/d
+	</div>
+  
+
+	</div>
+	<div class=big-green>
+  
+&nbsp; &#9671; ( R &#8743; &#9898;R )<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=prose>
+  
+"Eventually it will rain (at least) two days in a row."<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=big-green>
+  
+&nbsp; &#9723; ( R &#8594; &#9898;&#172;R )<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=prose>
+  
+"It will never rain two (or more) days in a row."<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=big-green>
+  
+&nbsp; &#9723; ( R &#8594; &#9898;R )<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=prose>
+  
+"If it ever rains, it will never quit."<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+        <br> <br> <br> <br> <br>
+	<br> <br>
+	
+	<div class=title>
+	  <a name=14>[14]</a> www.yak.net/d
+	</div>
+  
+
+	</div>
+	<div class=prose>
+  
+Can you write expressions for these:<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=prose>
+  
+(1) "It rains only every other day."<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=gloss>
+  
+Your expression must match exactly two stories.<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=prose>
+  
+(2) "Whenever it rains, it rains exactly two days in a row (never one, never three)."<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=gloss>
+  
+It may not rain at all.&nbsp; But it will rain an even number of days.<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+        <br> <br> <br> <br> <br>
+	<br> <br>
+	
+	<div class=title>
+	  <a name=15>[15]</a> www.yak.net/d
+	</div>
+  
+
+	</div>
+	<div class=prose>
+  
+Game of Thrones:<br>
+
+	</div>
+	<div class=big-green>
+  
+&nbsp;  &#9898;&#9671;W &#8743; &#172;W<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=gloss>
+  
+I'll end with some Real World Examples.<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=gloss>
+  
+From the Game of Thrones:<br>
+
+	</div>
+	<div class=gloss>
+  
+Starting tomorrow, eventually W;&nbsp; but not W today.<br>
+
+	</div>
+	<div class=gloss>
+  
+That means: "Winter is coming!"<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+        <br> <br> <br> <br> <br>
+	<br> <br>
+	
+	<div class=title>
+	  <a name=16>[16]</a> www.yak.net/d
+	</div>
+  
+
+	</div>
+	<div class=prose>
+  
+Game of Thrones:<br>
+
+	</div>
+	<div class=big-green>
+  
+&nbsp;  &#9898;&#9671;W &#8743; &#172;W<br>
+
+	</div>
+	<div class=prose>
+  
+Morton salt:<br>
+
+	</div>
+	<div class=big-green>
+  
+&nbsp;  &#9723; ( R &#8594; P )<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=gloss>
+  
+From Morton Salt:<br>
+
+	</div>
+	<div class=gloss>
+  
+It is always the case that R implies P.<br>
+
+	</div>
+	<div class=gloss>
+  
+That means: "When it rains, it pours!"<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+        <br> <br> <br> <br> <br>
+	<br> <br>
+	
+	<div class=title>
+	  <a name=17>[17]</a> www.yak.net/d
+	</div>
+  
+
+	</div>
+	<div class=prose>
+  
+Game of Thrones:<br>
+
+	</div>
+	<div class=big-green>
+  
+&nbsp;  &#9898;&#9671;W &#8743; &#172;W<br>
+
+	</div>
+	<div class=prose>
+  
+Morton salt:<br>
+
+	</div>
+	<div class=big-green>
+  
+&nbsp;  &#9723; ( R &#8594; P )<br>
+
+	</div>
+	<div class=prose>
+  
+Genesis 8 (God's Covenant to Noah):<br>
+
+	</div>
+	<div class=big-green>
+  
+&nbsp; &nbsp; &nbsp; 39&nbsp; &nbsp; i<br>
+
+	</div>
+	<div class=big-green>
+  
+&nbsp; &#172;&#9671;&nbsp;  &#8743;&nbsp; &nbsp; &#9898;&nbsp; R<br>
+
+	</div>
+	<div class=big-green>
+  
+&nbsp; &nbsp; &nbsp;  i=0<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=gloss>
+  
+From Genesis 8, we have God's Covenant to Noah:<br>
+
+	</div>
+	<div class=gloss>
+  
+It will never happen that,<br>
+
+	</div>
+	<div class=gloss>
+  
+it rains Today and Tomorrow and the Day after That, etc.,<br>
+
+	</div>
+	<div class=gloss>
+  
+up to 39 circles and an R.<br>
+
+	</div>
+	<div class=gloss>
+  
+In other words: "Starting today, it will never rain 40 days in a row!"<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+        <br> <br> <br> <br> <br>
+	<br> <br>
+	
+	<div class=title>
+	  <a name=18>[18]</a> www.yak.net/d
+	</div>
+  
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=prose>
+  
+Temporal Logic (or Tense Logic) "D" studied by Arthur Prior and Robert Bull.<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=prose>
+  
+Search for:&nbsp; Tense Logic, Temporal Logic, Modal Logic.<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=prose>
+  
+These slides:&nbsp; www.yak.net/d<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=gloss>
+  
+That's it for now.<br>
+
+	</div>
+	<div class=gloss>
+  
+I've made postcards with more puzzles.<br>
+
+	</div>
+	<div class=gloss>
+  
+Some are spread around the tables,<br>
+
+	</div>
+	<div class=gloss>
+  
+and they will also be in the gift exchange.<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+        <br> <br> <br> <br> <br> <br> <br> <br>
+        <br> <br> <br> <br> <br> <br> <br> <br>
+</body>
+</html>
+  
