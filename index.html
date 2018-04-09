@@ -7,39 +7,39 @@
 	  <style>
 	  	.green {
 		  color: #00FF00;
-		  font-size: 100%;
+		  font-size: 500%;
 		  /* font-family: courier, monospace; */
 		  font-family: monospace;
 		}
 		.yellow {
 		  color: #FFFF00;
-		  font-size: 100%;
+		  font-size: 500%;
 		  font-family: monospace;
 		}
 		.big-green {
 		  color: #00FF00;
-		  font-size: 150%;
+		  font-size: 750%;
 		  font-family: monospace;
 		}
 		.big-yellow {
 		  color: #FFFF00;
-		  font-size: 130%;
+		  font-size: 650%;
 		  font-family: monospace;
 		}
 		.title {
 		  color: #aaaaaa;
-		  font-size: 50%;
+		  font-size: 250%;
 		  font-family: Arial, sans-serif;
 		  text-align: center;
 		}
 		.prose {
 		  color: #FFFF00;
-		  font-size: 75%;
+		  font-size: 375%;
 		  font-family: Arial, sans-serif;
 		}
 		.gloss {
 		  color: #bbbbbb;
-		  font-size: 30%;
+		  font-size: 150%;
 		  font-family: Arial, sans-serif;
 		}
 	  </style>
@@ -104,7 +104,22 @@ Or just scroll down.<br>
 	</div>
 	<div class=prose>
   
-Rainy Day Stories: This is an introduction to the Temporal Logic system called "D" studied by Arthur Prior* and Robert Bull*.<br>
+Rainy Day Stories: <br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=prose>
+  
+This is an introduction to Temporal Logic, based the system called "D",<br>
+
+	</div>
+	<div class=prose>
+  
+studied by Arthur Prior and Robert Bull.<br>
 
 	</div>
 	<div class=prose>
@@ -152,14 +167,54 @@ These slides are on the web at www.yak.net/d<br>
 <br>
 
 	</div>
-	<div class=gloss>
+	<div class=prose>
   
-* According to: Mathematical Modal Logic: a View of its Evolution. Robert Goldblatt. Centre for Logic, Language and Computation. Victoria University, P. O. Box 600, Wellington, New Zealand.&nbsp; http://homepages.mcs.vuw.ac.nz/~rob/papers/modalhist.pdf<br>
+References:<br>
 
 	</div>
 	<div class=prose>
   
 <br>
+
+	</div>
+	<div class=prose>
+  
+Copeland, B. Jack.&nbsp; Stanford Encyclopedia of Philosophy &#187;  Temporal Logic &#187;  Prior’s Basic Tense Logic TL.<br>
+
+	</div>
+	<div class=prose>
+  
+https://plato.stanford.edu/entries/logic-temporal/#PriBasTenLogTL<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=prose>
+  
+Goldblatt, Robert.&nbsp; Mathematical Modal Logic: a View of its Evolution. Centre for Logic, Language and Computation. Victoria University, P. O. Box 600, Wellington, New Zealand.<br>
+
+	</div>
+	<div class=prose>
+  
+http://homepages.mcs.vuw.ac.nz/~rob/papers/modalhist.pdf<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=prose>
+  
+Prior, Arthur.&nbsp; Time and Modality. Oxford University Press. 1957.<br>
+
+	</div>
+	<div class=prose>
+  
+https://books.google.com/books/about/Time_and_Modality.html?id=K5nymD8qgigC<br>
 
 	</div>
 	<div class=prose>
@@ -695,12 +750,12 @@ All the usual Logic Operators are allowed: And, Or, Not, Implies.<br>
 	</div>
 	<div class=gloss>
   
-It rains TODAY and it rains TOMORROW.<br>
+It rains TODAY ... AND ... it rains TOMORROW.<br>
 
 	</div>
 	<div class=gloss>
   
-Only the last story starts with "1 1".<br>
+That matches only the last story, which starts with "1 1".<br>
 
 	</div>
 	<div class=prose>
@@ -754,12 +809,12 @@ Only the last story starts with "1 1".<br>
 	</div>
 	<div class=gloss>
   
-It rains TODAY and TOMORROW it does NOT rain.<br>
+It rains TODAY ... AND ... TOMORROW it does NOT rain.<br>
 
 	</div>
 	<div class=gloss>
   
-Only the first story starts with "1 0".<br>
+That matches only the first story, which starts with "1 0".<br>
 
 	</div>
 	<div class=prose>
@@ -823,7 +878,7 @@ So, it rains THE DAY AFTER TOMORROW and also THE DAY AFTER THAT.<br>
 	</div>
 	<div class=gloss>
   
-The first and last story both have "1"s in the 3rd and 4th position.<br>
+That matches the first and the last story, which both have "1"s in the 3rd and 4th position.<br>
 
 	</div>
 	<div class=prose>
@@ -862,7 +917,7 @@ Eventually, it will rain forevermore.<br>
 	</div>
 	<div class=prose>
   
-"Some day it will rain and never quit."<br>
+"It may rain off and on for a while, but some day it will rain and never quit."<br>
 
 	</div>
 	<div class=prose>
@@ -872,12 +927,17 @@ Eventually, it will rain forevermore.<br>
 	</div>
 	<div class=gloss>
   
-Diamond Box R means Eventually it will rain forevermore.<br>
+The next two get interesting.<br>
 
 	</div>
 	<div class=gloss>
   
-That is, some day it will rain and never quit.<br>
+Diamond Box R means ... Eventually ... it will rain forevermore.<br>
+
+	</div>
+	<div class=gloss>
+  
+That is, it may rain off an on for a while, but some day it will rain and never quit.<br>
 
 	</div>
 	<div class=prose>
@@ -897,7 +957,7 @@ That is, some day it will rain and never quit.<br>
 	</div>
 	<div class=prose>
   
-Forevermore, it will eventually rain.<br>
+Forevermore... it will eventually rain.<br>
 
 	</div>
 	<div class=prose>
@@ -918,6 +978,11 @@ Box Diamond R means Forevermore it will eventually rain.<br>
 	<div class=gloss>
   
 No matter how far in the future we go, it will always rain again.<br>
+
+	</div>
+	<div class=gloss>
+  
+If our story is that it only rains on prime-numbered days, that story would match, because no matter how far we go, there's always another prime.<br>
 
 	</div>
 	<div class=prose>
@@ -1013,7 +1078,7 @@ Can you write expressions for these:<br>
 <br>
 
 	</div>
-	<div class=prose>
+	<div class=big-green>
   
 (1) "It rains only every other day."<br>
 
@@ -1023,9 +1088,9 @@ Can you write expressions for these:<br>
 <br>
 
 	</div>
-	<div class=gloss>
+	<div class=prose>
   
-Your expression must match exactly two stories.<br>
+(Your expression must match exactly two stories.)<br>
 
 	</div>
 	<div class=prose>
@@ -1038,7 +1103,7 @@ Your expression must match exactly two stories.<br>
 <br>
 
 	</div>
-	<div class=prose>
+	<div class=big-green>
   
 (2) "Whenever it rains, it rains exactly two days in a row (never one, never three)."<br>
 
@@ -1048,9 +1113,9 @@ Your expression must match exactly two stories.<br>
 <br>
 
 	</div>
-	<div class=gloss>
+	<div class=prose>
   
-It may not rain at all.&nbsp; But it will rain an even number of days.<br>
+(But it may not rain at all.)<br>
 
 	</div>
 	<div class=prose>
@@ -1332,6 +1397,55 @@ Some are spread around the tables,<br>
 	<div class=gloss>
   
 and they will also be in the gift exchange.<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+        <br> <br> <br> <br> <br>
+	<br> <br>
+	
+	<div class=title>
+	  <a name=19>[19]</a> www.yak.net/d
+	</div>
+  
+
+	</div>
+	<div class=prose>
+  
+Bibliography:<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=prose>
+  
+Robert Goldblatt. Mathematical Modal Logic: a View of its Evolution. Centre for Logic, Language and Computation. Victoria University, P. O. Box 600, Wellington, New Zealand.&nbsp; http://homepages.mcs.vuw.ac.nz/~rob/papers/modalhist.pdf<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=prose>
+  
+Arthur N Prior.&nbsp; Time and Modality.&nbsp; London : Oxford : At The Clarendon Press, 1968<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
+
+	</div>
+	<div class=prose>
+  
+<br>
 
 	</div>
 	<div class=prose>

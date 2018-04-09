@@ -2,7 +2,10 @@
 ; Or just scroll down.
 
 /page
-Rainy Day Stories: This is an introduction to the Temporal Logic system called "D" studied by Arthur Prior* and Robert Bull*.
+Rainy Day Stories: 
+
+This is an introduction to Temporal Logic, based the system called "D",
+studied by Arthur Prior and Robert Bull.
 
 I haven't seen Temporal Logic used in Recreational Maths and would like to introduce this system.
 It is easy enough that anyone can understand it, but compelling enough to make interesting puzzles.
@@ -12,8 +15,16 @@ These slides are on the web at www.yak.net/d
     -- Henry Strickland  << strick % yak.net >>
     -- Gathering for Gardner << G4G13 >> 2018-04
 
-; * According to: Mathematical Modal Logic: a View of its Evolution. Robert Goldblatt. Centre for Logic, Language and Computation. Victoria University, P. O. Box 600, Wellington, New Zealand.  http://homepages.mcs.vuw.ac.nz/~rob/papers/modalhist.pdf
+References:
 
+Copeland, B. Jack.  Stanford Encyclopedia of Philosophy >> Temporal Logic >> Prior’s Basic Tense Logic TL.
+https://plato.stanford.edu/entries/logic-temporal/#PriBasTenLogTL
+
+Goldblatt, Robert.  Mathematical Modal Logic: a View of its Evolution. Centre for Logic, Language and Computation. Victoria University, P. O. Box 600, Wellington, New Zealand.
+http://homepages.mcs.vuw.ac.nz/~rob/papers/modalhist.pdf
+
+Prior, Arthur.  Time and Modality. Oxford University Press. 1957.
+https://books.google.com/books/about/Time_and_Modality.html?id=K5nymD8qgigC
 
 
 /page
@@ -113,8 +124,8 @@ Four Example Rainy Day Stories (1=Rain, 0=NoRain):
 >y [.] 0 0 0 0 0 0 0 0 0 0 0 0 0 0...
 >y [v] 1 1 1 1 1 1 1 1 1 1 1 1 1 1...
 
-; It rains TODAY and it rains TOMORROW.
-; Only the last story starts with "1 1".
+; It rains TODAY ... AND ... it rains TOMORROW.
+; That matches only the last story, which starts with "1 1".
 
 /page
 >g   R  &&  @@~~R
@@ -124,8 +135,8 @@ Four Example Rainy Day Stories (1=Rain, 0=NoRain):
 >y [.] 0 0 0 0 0 0 0 0 0 0 0 0 0 0...
 >y [.] 1 1 1 1 1 1 1 1 1 1 1 1 1 1...
 
-; It rains TODAY and TOMORROW it does NOT rain.
-; Only the first story starts with "1 0".
+; It rains TODAY ... AND ... TOMORROW it does NOT rain.
+; That matches only the first story, which starts with "1 0".
 
 /page
 >g   @@@@R  &&  @@@@@@R
@@ -137,25 +148,27 @@ Four Example Rainy Day Stories (1=Rain, 0=NoRain):
 
 ; Two circles in a row means "Tomorrow's Tomorrow"; three circles is the day after that.
 ; So, it rains THE DAY AFTER TOMORROW and also THE DAY AFTER THAT.
-; The first and last story both have "1"s in the 3rd and 4th position.
+; That matches the first and the last story, which both have "1"s in the 3rd and 4th position.
 
 
 /page
 >g   %%##R
 
 Eventually, it will rain forevermore.
-"Some day it will rain and never quit."
+"It may rain off and on for a while, but some day it will rain and never quit."
 
-; Diamond Box R means Eventually it will rain forevermore.
-; That is, some day it will rain and never quit.
+; The next two get interesting.
+; Diamond Box R means ... Eventually ... it will rain forevermore.
+; That is, it may rain off an on for a while, but some day it will rain and never quit.
 
 >g   ##%%R
 
-Forevermore, it will eventually rain.
+Forevermore... it will eventually rain.
 "No matter how far in the future we go, it will always rain again."
 
 ; Box Diamond R means Forevermore it will eventually rain.
 ; No matter how far in the future we go, it will always rain again.
+; If our story is that it only rains on prime-numbered days, that story would match, because no matter how far we go, there's always another prime.
 
 /page
 >g   %% ( R && @@R )
@@ -173,14 +186,14 @@ Forevermore, it will eventually rain.
 /page
 Can you write expressions for these:
 
-(1) "It rains only every other day."
+>g (1) "It rains only every other day."
 
-; Your expression must match exactly two stories.
+(Your expression must match exactly two stories.)
 
 
-(2) "Whenever it rains, it rains exactly two days in a row (never one, never three)."
+>g (2) "Whenever it rains, it rains exactly two days in a row (never one, never three)."
 
-; It may not rain at all.  But it will rain an even number of days.
+(But it may not rain at all.)
 
 /page
 Game of Thrones:
@@ -234,3 +247,12 @@ I dedicate these slides to the Public Domain ( Creative Commons CC0 1.0 Universa
 ; I've made postcards with more puzzles.
 ; Some are spread around the tables,
 ; and they will also be in the gift exchange.
+
+/page
+Bibliography:
+
+Robert Goldblatt. Mathematical Modal Logic: a View of its Evolution. Centre for Logic, Language and Computation. Victoria University, P. O. Box 600, Wellington, New Zealand.  http://homepages.mcs.vuw.ac.nz/~rob/papers/modalhist.pdf
+
+Arthur N Prior.  Time and Modality.  London : Oxford : At The Clarendon Press, 1968
+
+

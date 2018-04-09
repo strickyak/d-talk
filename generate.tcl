@@ -2,8 +2,13 @@ set Page 0
 
 set in [read stdin]
 
+set basis 5.00
+proc size {x} {
+	expr {int( $::basis * $x )}
+}
+
 proc prelude {} {
-  puts {
+  puts [subst -nobackslashes -novariables {
 <html>
 <head>
 	  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
@@ -12,39 +17,39 @@ proc prelude {} {
 	  <style>
 	  	.green {
 		  color: #00FF00;
-		  font-size: 100%;
+		  font-size: [size 100]%;
 		  /* font-family: courier, monospace; */
 		  font-family: monospace;
 		}
 		.yellow {
 		  color: #FFFF00;
-		  font-size: 100%;
+		  font-size: [size 100]%;
 		  font-family: monospace;
 		}
 		.big-green {
 		  color: #00FF00;
-		  font-size: 150%;
+		  font-size: [size 150]%;
 		  font-family: monospace;
 		}
 		.big-yellow {
 		  color: #FFFF00;
-		  font-size: 130%;
+		  font-size: [size 130]%;
 		  font-family: monospace;
 		}
 		.title {
 		  color: #aaaaaa;
-		  font-size: 50%;
+		  font-size: [size 50]%;
 		  font-family: Arial, sans-serif;
 		  text-align: center;
 		}
 		.prose {
 		  color: #FFFF00;
-		  font-size: 75%;
+		  font-size: [size 75]%;
 		  font-family: Arial, sans-serif;
 		}
 		.gloss {
 		  color: #bbbbbb;
-		  font-size: 30%;
+		  font-size: [size 30]%;
 		  font-family: Arial, sans-serif;
 		}
 	  </style>
@@ -80,7 +85,7 @@ proc prelude {} {
 	  </script>
 </head>
 <body bgcolor=#000055>
-  }
+  }]
 }
 proc postlude {} {
   puts {
